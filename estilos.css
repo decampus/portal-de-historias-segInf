@@ -75,12 +75,26 @@ section {
 }
 
 /* Busca */
+.busca {
+  position: absolute;
+  right: 40px;
+}
+
 .busca input[type="text"] {
+  right: 80px;
   padding: 10px;
-  width: 60%;
+  width: fit-content;
   max-width: 400px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.search-icon {
+  position: relative;
+  top: 6px;
+  left: -32px;
+  color: #555;
 }
 
 .busca button {
@@ -473,3 +487,4 @@ button:hover {
 .aba {
   margin-top: 20px;
 }
+
