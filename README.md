@@ -27,6 +27,38 @@ O objetivo deste projeto é criar um portal completo com:
 
 ---
 
+## Execução
+
+Primeiramente será necessário construir o banco de dados. Para isso, é necessário ter o PostgreSQL instalado e os seguintes comandos devem ser executados em algum client:
+
+```
+CREATE DATABASE portal_de_historias_seginf;
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    senha_hash TEXT NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+Depois é necessário criar um arquivo .env na raíz do projeto com os seguintes campos:
+
+```
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=portal_de_historias_seginf
+DB_USER=
+DB_PASS=
+PEPPER=
+PORT=3000
+```
+
+Onde `DB_USER` é o nome do usuário de banco de dados local, `DB_PASS` é a respectiva senha deste usuário e `PEPPER` é uma chave usada para o procedimento de peppering da senha no banco de dados, pode ser qualquer sequência alfanumérica.
+
+Instale os pacotes com `npm install` e servido com `node index.js`. Por padrão, o servidor irá abrir na pagina de cadastro para fins de teste da funcionalidade implementada.
+
 ## 🧪 Tecnologias Utilizadas
 
 - HTML5
