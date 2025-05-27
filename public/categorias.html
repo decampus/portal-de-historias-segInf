@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Categorias - Portal de Histórias</title>
+  <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">📖 Portal de Histórias</div>
+    <nav class="nav-links">
+      <a href="../index.html">Início</a>
+      <a href="categorias.html">Categorias</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="nova-historia.html">Escrever</a>
+    </nav>
+    <div class="profile-menu">
+      <img src="https://i.pravatar.cc/32" alt="Perfil" class="profile-pic" />
+      <div class="dropdown">
+        <a href="perfil.html">Meu Perfil</a>
+        <a href="login.html"> Login </a>
+        <a href="logout.html">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <h2>Explore Categorias de Histórias</h2>
+
+    <div class="category-section">
+      <h3>Romance</h3>
+      <ul class="book-list">
+        <li>Amor em Segredo</li>
+        <li>Entre Versos e Abraços</li>
+        <li>Nosso Último Verão</li>
+      </ul>
+    </div>
+
+    <div class="category-section">
+      <h3>Aventura</h3>
+      <ul class="book-list">
+        <li>O Guardião das Terras Perdidas</li>
+        <li>Viagem à Ilha Desconhecida</li>
+        <li>Mapas e Mistérios</li>
+      </ul>
+    </div>
+
+    <div class="category-section">
+      <h3>Suspense</h3>
+      <ul class="book-list">
+        <li>Silêncio na Noite</li>
+        <li>O Enigma do Quarto Escuro</li>
+        <li>Vigilância Invisível</li>
+      </ul>
+    </div>
+
+    <div class="category-section">
+      <h3>Fantasia</h3>
+      <ul class="book-list">
+        <li>Reino de Étherion</li>
+        <li>Asas de Cristal</li>
+        <li>O Magista Esquecido</li>
+      </ul>
+    </div>
+
+    <div class="category-section">
+      <h3>Terror</h3>
+      <ul class="book-list">
+        <li>A Mansão dos Sussurros</li>
+        <li>O Sorriso do Espantalho</li>
+        <li>Eco das Sombras</li>
+      </ul>
+    </div>
+
+    <div class="category-section">
+      <h3>Comédia</h3>
+      <ul class="book-list">
+        <li>Diário de um Enrolado</li>
+        <li>Família Fora de Controle</li>
+        <li>Caos no Condomínio</li>
+      </ul>
+    </div>
+
+    <div class="category-section">
+      <h3>Ficção Científica</h3>
+      <ul class="book-list">
+        <li>Projeto Nebulosa</li>
+        <li>Entre Estrelas e Máquinas</li>
+        <li>O Último Humano</li>
+      </ul>
+    </div>
+
+    <div class="category-section">
+      <h3>Drama</h3>
+      <ul class="book-list">
+        <li>Fragmentos de Mim</li>
+        <li>O Peso do Silêncio</li>
+        <li>Cartas Nunca Enviadas</li>
+      </ul>
+    </div>
+  </main>
+<<script>
+  function toggleDropdown() {
+    const menu = document.getElementById("dropdown-menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.profile-pic')) {
+      const dropdown = document.getElementById("dropdown-menu");
+      if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      }
+    }
+  };
+</script>
+
+  <footer>
+    © 2025 Portal de Histórias. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "portal-de-historias-seginf",
+  "version": "1.0.0",
+  "description": "Bem-vindo ao **Portal de Histórias**, um site desenvolvido para permitir que **escritores independentes** publiquem suas obras e que **leitores** possam acessá-las por categorias, gêneros ou autores.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decampus/portal-de-historias-segInf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/decampus/portal-de-historias-segInf/issues"
+  },
+  "homepage": "https://github.com/decampus/portal-de-historias-segInf#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}

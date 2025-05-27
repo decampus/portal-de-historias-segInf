@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - Portal de Histórias</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="navbar">
+      <div class="logo">📚 Portal de Histórias</div>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="categorias.html">Categorias</a>
+      </nav>
+      <div class="profile-menu">
+        <img src="https://via.placeholder.com/40" alt="Perfil" class="profile-image" onclick="toggleDropdown()" />
+        <div class="dropdown-menu" id="dropdown">
+          <a href="perfil.html">Meu Perfil</a>
+          <a href="configuracoes.html">Configurações</a>
+          <a href="logout.html" onclick="logout()">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="main-content">
+    <section class="cadastro-section">
+      <h2>Crie sua Conta</h2>
+      <form id="cadastroForm" method="POST" action="/cadastrar" onsubmit="return validarCadastro()">
+        <input type="text" name="nome" id="nome" placeholder="Nome completo" required />
+        <input type="email" name="email" id="email" placeholder="E-mail" required />
+        <input type="email" id="confirmEmail" placeholder="Confirmar E-mail" required />
+        <input type="password" name="senha" id="senha" placeholder="Senha" required />
+        <input type="password" id="confirmSenha" placeholder="Confirmar Senha" required />
+        <button type="submit" class="btn-cadastrar">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <p>© 2025 Portal de Histórias</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleSenha(id, icon) {
+      const input = document.getElementById(id);
+      input.type = input.type === "password" ? "text" : "password";
+    }
+
+    function toggleDropdown() {
+      const menu = document.getElementById("dropdown");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function logout() {
+      alert("Logout realizado com sucesso!");
+      // Aqui você poderia apagar dados do localStorage se quiser
+    }
+
+    function validarCadastro() {
+      const email = document.getElementById("email").value;
+      const confirmEmail = document.getElementById("confirmEmail").value;
+      const senha = document.getElementById("senha").value;
+      const confirmSenha = document.getElementById("confirmSenha").value;
+
+      if (email !== confirmEmail) {
+        alert("Os e-mails não coincidem.");
+        return false;
+      }
+
+      if (senha !== confirmSenha) {
+        alert("As senhas não coincidem.");
+        return false;
+      }
+
+      return true;
+    }
+
+    
+    
+  </script>
+</body>
+</html>
